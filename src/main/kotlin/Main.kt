@@ -36,5 +36,24 @@ fun main (){
     println(resposta::class)
 
 
+    //NUMEROS x TEXTOS , dá erro desta forma
+    val numero1 = "10a"
+    //val resposta1 = numero1.toInt()
+    //println(resposta1)
+
+
+    //NUMEROS GRANDES
+    val numero : Long = 1_250_000_000 // posso declarar assim, para facilitar visualiação
+
+    //OPERADORES LÓGICOS(+ - / *)
+    val txtIdade: String = "34"
+    println(txtIdade + "Minha idade!") // CONCATENANDO
+
+
+    val boleana1 = false
+
+
+
+
 
 }
