@@ -51,9 +51,14 @@ fun main (){
 
 
     val boleana1 = false
+    // true false / (1 - 0)
+    println(!boleana1) // ! negativa
 
 
-
-
+    //CRIPTOGRAFIA - CHAR
+    val name1 : String = "Ricardo" // é uma sequencia de caracteres CHARS
+    val primeiraLetra : Char = 'R'
+    val sobreNome = '\t' // 16 bits
+    println(name1 + primeiraLetra + sobreNome)
 
 }
