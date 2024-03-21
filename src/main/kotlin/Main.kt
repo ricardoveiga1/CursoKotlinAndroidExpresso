@@ -1,5 +1,5 @@
 fun main (){
-    // GLOSSARIO (var, val, fun, class, double, String, int, false, true)
+    // GLOSSARIO (var, val, fun, class, double, String, int, false, true, null)
 
     // val é uma variavel IMUTAVEL
     // var é uma variavel MUTAVEL
@@ -148,6 +148,28 @@ fun main (){
     } else{
         println("falha")
     }
+
+    //COMPARARA STRINGS
+    val produto7 = "Imac"
+    val produto8 = "Imac"
+
+    println(produto7 == produto8) // igual
+    println(produto7 != produto8) // diferente
+
+
+    //ACEITA NULL(Nullable)
+    var produto9: String? = "Imac" // ? faz aceitar nulo
+    produto9 = "Iphone"
+    produto9 = null
+
+    var endereco : String? = null //"Rua A"
+    val qtdDeCaracteres = endereco?.length // length é uma propriedade de String, logo se a variável aceitar null, vai dar erro, portanto temos que add ? para o length só ser utilizado se a variável tiver alocação na memoria, ou seja, diferente de NULL
+    println("Sua rua tem: ${qtdDeCaracteres}  caracteres") // segunda solução podemos usar IF ELSE para validar a variável antes de executar o bloco desejado
+
+    //Operador ELVIS
+    var endereco1 : String? = null
+    val qtdDeCaracteres1 = endereco1?.length ?: 0 // sendo Null iremos definir o valor padrão 0 no lugar de null( consigo acessar propriedade lenght, então guardo na qtdDeCaracteres1, se não, defino valor padrão 0)
+    println("Sua rua tem: ${qtdDeCaracteres1}  caracteres")
 
 
 }
