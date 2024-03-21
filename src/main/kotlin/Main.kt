@@ -1,5 +1,5 @@
 fun main (){
-    // GLOSSARIO (var, val, fun, class, double, String, int)
+    // GLOSSARIO (var, val, fun, class, double, String, int, false, true)
 
     // val é uma variavel IMUTAVEL
     // var é uma variavel MUTAVEL
@@ -60,5 +60,94 @@ fun main (){
     val primeiraLetra : Char = 'R'
     val sobreNome = '\t' // 16 bits
     println(name1 + primeiraLetra + sobreNome)
+
+
+    //PRIMITIVOS 80%
+    // int, double, String, short, byte, long, float, boolean, char
+
+    val nome : String = "Ricardo Veiga" // OBJETO = TIPO
+    val tamanhoNome = nome.length // funçao que muda o comportamento de um objeto(String)
+    val novoNome = nome.uppercase() // acessar a propriedade de um objeto(String)
+    println(tamanhoNome)
+    println(novoNome)
+    println("Bom dia".length)
+
+    // FORMATAÇÃO DE TEXTO
+    //1.
+    val message =  "Olá Ricardo.\nSeu produto chegou!"
+
+    println(message)
+    //2.
+    val welcome = """
+        Olá Kadico,
+        Seu produto chegou!
+    """.trimIndent()
+    println(welcome)
+
+    val csv = """
+        texto1,
+        texto2,
+        texto3
+    """.replaceIndent(";")
+    println(csv)
+
+    //3.
+    val nome3 = "Ricardo"
+    val age3 = 34
+    val preco3 = 20
+    println("Olá, $nome3. Sua idade é ${age3 + 10}. Seu desconto é: $preco3 e seu nome possui ${nome3.length} caracteres  ")
+
+
+    // CONDIÇÕES (CONTROLE DE FLUXO)
+    // SE, SENÃO,  -> DEVE SER UMA EXPRESSÃO BOOLEANA
+    // (<, <=, >, >=, !, ==, !=)
+
+    val produto6 = "Iphone"
+    if (produto6.length > 3 ){
+        println("Produto cadastrado com sucesso")
+    } else{
+        println("Você não pode cadastrar esse produto")
+    }
+
+    val preco6 = 9_000
+    if (preco6 > 30_000 ){
+        println("Voce ganhou 30% de desconto")
+    } else if (preco6 > 20_000){
+        println("Voce ganhou 20% de desconto")
+    } else if (preco6 > 10_000){
+    println("Voce ganhou 10% de desconto")
+    } else{
+        println("Voce não ganhou desconto")
+    }
+
+    //CONDIÇOES COMPOSTAS
+    var preco5 = 49
+    val produto5 = "Teclado"
+    //E
+    //TRUE | TRUE   = true
+    //TRUE | FALSE  = false
+    //FALSE | TRUE  = false
+    //FALSE | FALSE = false
+
+    if (preco5 == 49 && produto5 == "Teclado"){
+        println("sucesso")
+    } else{
+        println("falha")
+    }
+
+    //OU - no OU se a primeira expressão for verdadeira o bloco não checa a segunda
+    //TRUE | TRUE   = true
+    //TRUE | FALSE  = true
+    //FALSE | TRUE  = true
+    //FALSE | FALSE = false
+    val a = 10
+    val b = 0
+    //println(10/0)
+    if (a == 10 || 10/ b == 1){
+        println("sucesso")
+    } else{
+        println("falha")
+    }
+
 
 }
