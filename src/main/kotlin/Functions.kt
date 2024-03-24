@@ -4,6 +4,8 @@ fun main(){
     //toda função pode ter um tipo de retorno (double, String, int, etc) ou caso não tenha, pode usar () : Unit, a fun main é uma função unit(nao retorno nada)
     //declaração e o corpo da função
     // as funções podem ter ou não parametros
+    //Parametros nomeados
+    //Sobrecarga de funções
 
     olaMundo() //call
     //uma série de código
@@ -18,7 +20,9 @@ fun main(){
 
     inLine()
 
-    verificarIdade(18)
+    //entre parenteses são os argumentos da função
+    verificarIdade(34, "Kadico", true)
+    verificarIdade(nome = "Guilherme", age = 3, isAdmin =  false)
 }
 
 //função sem retorno
@@ -53,7 +57,8 @@ fun inLine() = println("Função inLine, sem { }")
 fun verificarIdadeInLine(age : Int) = if(age > 18) println("Pode dirigir") else println("Não pode dirigir") // pode ser feito assim, é a mesma coisa que funcao abaixo
 
 //função dinamica
-fun verificarIdade(age : Int){
+fun verificarIdade(age : Int, nome: String, isAdmin: Boolean){ //entre pareteses são os parametros da função
+    println("Minha idade é: ${age} e meu nome é: ${nome}, sou admin: ${isAdmin}")
     if(age > 18){
         println("Pode dirigir")
     } else{
