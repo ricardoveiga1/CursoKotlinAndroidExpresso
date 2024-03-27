@@ -1,6 +1,10 @@
 fun main(){
     // GLOSSARIO (var, val, fun, class, double, String, int, false, true, null)
     // functions - bloco de código reutilizaveis
+
+    //functions, escopo, fluxo if else, retornos, tipos, manipulação de memoria
+
+
     //toda função pode ter um tipo de retorno (double, String, int, etc) ou caso não tenha, pode usar () : Unit, a fun main é uma função unit(nao retorno nada)
     //declaração e o corpo da função
     // as funções podem ter ou não parametros
@@ -23,6 +27,24 @@ fun main(){
     //entre parenteses são os argumentos da função
     verificarIdade(34, "Kadico", true)
     verificarIdade(nome = "Guilherme", age = 3, isAdmin =  false)
+
+    verificacaoParaLogin(34, "Kadico Sobrecarga 2", true)
+    verificacaoParaLogin(34, "Kadico Sobrecarga 1")
+
+
+    cadastroUsuario(3, "Guilherme")
+    cadastroUsuario(34, "Kadico", true)
+    cadastroUsuario(18, )
+
+
+    val resultadoSoma = soma(2, 3)
+    val resultadoMultiplicacao = multiplicacao(2.0, 3.5)
+
+    println("Resulado da soma: ${resultadoSoma}")
+    println("Resulado da multiplicacao: ${resultadoMultiplicacao}")
+
+    println("Resulado da multiplicacao: ${multiplicacao(3.0, 5.5)}")
+
 }
 
 //função sem retorno
@@ -65,3 +87,28 @@ fun verificarIdade(age : Int, nome: String, isAdmin: Boolean){ //entre pareteses
         println("Não pode dirigir")
     }
 }
+
+
+//Sobrecarga
+fun verificacaoParaLogin(age : Int, nome: String, isAdmin: Boolean) {
+    println("INSTRUÇÃO 2: Minha idade é: ${age} e meu nome é: ${nome}, sou admin: ${isAdmin}")
+}
+
+fun verificacaoParaLogin(age : Int, nome: String) {
+    println("INSTRUÇÃO 1: Minha idade é: ${age} e meu nome é: ${nome}")
+}
+
+//Matando a sobrecarga para escrever menos código
+fun cadastroUsuario(age : Int, nome: String = "Desconhecido", isAdmin: Boolean = false) {
+    println("usuário cadastrado com idade: ${age}, nome: ${nome}, admin: ${isAdmin}")
+}
+
+
+fun soma(x: Int, y: Int) : Int{//toda vez que definir o tipo de retorno, preciso adicionar return na função
+    return x+y
+}
+
+fun multiplicacao(x: Double, y: Double): Double{
+    return x*y
+}
+
