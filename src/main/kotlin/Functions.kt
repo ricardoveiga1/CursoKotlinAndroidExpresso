@@ -1,5 +1,5 @@
 fun main(){
-    // GLOSSARIO (var, val, fun, class, double, String, int, false, true, null)
+    // GLOSSARIO (var, val, fun, class, double, String, int, false, true, null, ?:, return)
     // functions - bloco de código reutilizaveis
 
     //functions, escopo, fluxo if else, retornos, tipos, manipulação de memoria
