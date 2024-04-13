@@ -14,30 +14,53 @@ fun main(){
     // uma vez modificado o molde, TODOS os objetos que saem vão receber a atualização
 
 
-    val userA = Usuario()
-    val userB = Usuario()
-    userA.nome = "Kadico"
-    userB.nome = "Guilherme"
+    val userA = User()
+    val userB = User()
+    userA.name = "Kadico"
+    //userB.name = "Guilherme"
 
-    println(userB.nome)
+   // println(userB.name)
 
-    userA.imprimieCaixaAlta()
-    userB.imprimieCaixaAlta()
+    userA.printUpperCase()
+    //userB.imprimieCaixaAlta()
+
+    userA.updateName("Testandofucao")
+    userA.printUpperCase()
+
+    val buttonSuccess = Button()
+    buttonSuccess.text = "Sucesso"
+    buttonSuccess.color = "00FF00"
+
+    val buttonCancel = Button()
+    buttonSuccess.text = "Cancelar"
+    buttonSuccess.color = "FF0000"
+
+    val nameLentgh = userA.getameLength()
+    println(nameLentgh)
+
+    //usando molde da classe
+    val userOOP = User()
+    userOOP.name = "Ricardo"
+    println(userOOP.getameLength())
 
 }
 
-class Usuario{
-    var nome: String = "" // propriedade
+class User1 {
+    var name: String = "" // propriedade
 
     //responsabilidade
-    fun imprimieCaixaAlta(): Unit { // unit é função sem retorno
-        println("Ola " + nome.uppercase())
+    fun printUpperCase(): Unit { // unit é função sem retorno
+        println("Ola " + name.uppercase())
     }
 
     fun getNomeCaixaAlta(): String {
-        val res = nome.uppercase()
+        val res = name.uppercase()
         return res
         //poderia ser return  nome.uppercase()
+    }
+
+    fun updateName(newName: String) {
+        name = "$newName atualizado com sucesso"
     }
 
 }
