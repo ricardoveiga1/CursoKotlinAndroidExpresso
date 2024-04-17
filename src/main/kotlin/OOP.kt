@@ -13,7 +13,6 @@ fun main(){
     // objeto é a instancia(a criação) a partir daquele molde
     // uma vez modificado o molde, TODOS os objetos que saem vão receber a atualização
 
-
     val userA = User()
     val userB = User()
     userA.name = "Kadico"
