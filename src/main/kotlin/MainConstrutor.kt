@@ -28,6 +28,15 @@ fun main() {
     //user.label = "Trocar o texto da label"
     println(user.label)
 
+    val userA = UserConstructor("Kadico")
+   //  userA.MAX_NAME_LENGH - não é possível acessar por ser privado, somente o objeto classe pode manipular
+
+
+
+    //PROPRIEDADES DE COMPORTAMENTOS DA CLASSE(NÃO É DO OBJETO)
+
+
+
 
 
 

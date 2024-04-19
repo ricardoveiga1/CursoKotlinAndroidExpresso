@@ -7,6 +7,17 @@
 //OPÇÃO 3 - espera que o construtor receba o valor(var)
 class UserConstructor constructor( var name: String, var isAdmin:Boolean) {
 
+    companion object{ //ROPRIEDADE  E COMPORTAMENTO DA CLASSE, TODOS TEM ACESSO A ESTE COMPORTAMENTO
+        //const COMPILAÇÃO(É CONSTANTE)
+        //val EXECUÇÃO (é constante em tempo de execução)
+        const val MAX_NAME_LENGHT = 8 // FICA VISIVEL APENAS NO ESCOPO DA CLASSE, A PROPRIEDADE FICA DISPONÍVEL A TODOS E NÃO APENAS AO NOVO OBJKETITO CRIADO NA INSTANCIAÇÃO
+    // TODOS MOLDE QUE SAIR DA CLASSE, VAI SAIR COM MAX NAME = 8
+    }
+
+// POR CONVERSÃO SEMPRE DECLARAMOS AS VARIÁVEIS COMO VAL, DEPOIS SE PRECISARMOS, MUDAMOS PARA VAR
+    //private val MAX_NAME_LENGHT = 8 // POR PADRAO USAMOS COMO UPPERCASE
+
+
     //var - mutavel
     //val - imutavel
     var label = "$name é admin do sistema: $isAdmin"
@@ -40,6 +51,9 @@ class UserConstructor constructor( var name: String, var isAdmin:Boolean) {
     }
 
     fun updateName(newName: String) {
+        if (newName.length > MAX_NAME_LENGHT) {
+            //// faz o que quiser para atualizar nome do usuário e n±ao atualiza
+        }
         name = newName
     }
 
