@@ -1,3 +1,5 @@
+package three
+
 class User {
     var name: String = ""
     var cpf: CPF = CPF()

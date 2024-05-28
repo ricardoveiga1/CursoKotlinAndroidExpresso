@@ -1,13 +1,13 @@
-//OPÇÃO 1 - sem valor padrão + palavra constructor explicita
-// class User constructor(var name: String) {
+package four//OPÇÃO 1 - sem valor padrão + palavra constructor explicita
+// class three.User constructor(var name: String) {
 
 //OPÇÃO 2 - valor padrão
-// class User constructor(var name: String) {
+// class three.User constructor(var name: String) {
 
 //OPÇÃO 3 - espera que o construtor receba o valor(var)
 class UserConstructor constructor( var name: String, var isAdmin:Boolean) {
 
-    companion object{ //ROPRIEDADE  E COMPORTAMENTO DA CLASSE, TODOS TEM ACESSO A ESTE COMPORTAMENTO
+    companion object{ //PROPRIEDADE  E COMPORTAMENTO DA CLASSE, TODOS TEM ACESSO A ESTE COMPORTAMENTO
         //const COMPILAÇÃO(É CONSTANTE)
         //val EXECUÇÃO (é constante em tempo de execução)
         const val MAX_NAME_LENGHT = 8 // FICA VISIVEL APENAS NO ESCOPO DA CLASSE, A PROPRIEDADE FICA DISPONÍVEL A TODOS E NÃO APENAS AO NOVO OBJKETITO CRIADO NA INSTANCIAÇÃO

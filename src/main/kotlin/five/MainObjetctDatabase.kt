@@ -1,3 +1,7 @@
+package five
+
+import five.User2
+
 fun main() {
 
    //OBJETOS UNICOS (SINGLETON)
@@ -31,14 +35,14 @@ fun login(user: User2){
 
 
 //TODOS OBJECT SAO OBJETOS ÚNICOS, OU SEJA, NÃO EXISTE OUTRA ISTANCIA DESSE OBJETO VIVO NA APLICAÇÃO
-object Constants {
+object Constants { //todos object sao companion object
     const val MAX_NAME_LENGHT = 8
     const val DOMAIN = "https://exemplo.com"
     const val IMAGE_PATH = "/images"
-     const val PHOTO_EXT = ".jpg"
+    const val PHOTO_EXT = ".jpg"
 }
 
 ///MUITO IMPORTANTE
 // CLASSES -> é molde para criar N objetos
-// OBJETOS -> é o conjunto de prop. e comportamentos de um contexto do seu sistema (Button, LoginScrean, PassValidador)
+// OBJETOS -> é o conjunto de prop. e comportamentos de um contexto do seu sistema (three.Button, LoginScrean, PassValidador)
 // OBJECTS -> é um objeto também, só que ele é único , ou seja, não é igual a classe que sai de vários objetos(exemplo: banco de dados, sessão de unuário, Logs)

@@ -1,3 +1,5 @@
+package four
+
 fun main() {
 
 
@@ -6,14 +8,14 @@ fun main() {
     //sobercarga de cosntrutor
 
 
-//    val userA = UserConstructor("Ricardo Veiga", true)
+//    val userA = four.UserConstructor("Ricardo Veiga", true)
 //    val nameLentgh = userA.getameLength()
 //    println(nameLentgh)
 //    println(userA.name)
 //    println(userA.isAdmin)
 //
 //
-//    val userB = UserConstructor("Gustavo")
+//    val userB = four.UserConstructor("Gustavo")
 //    //userB.name = "Gustavo"
 //    println(userB.getameLength())
 //    println(userB.name)
@@ -34,8 +36,6 @@ fun main() {
 
 
     //PROPRIEDADES DE COMPORTAMENTOS DA CLASSE(NÃO É DO OBJETO)
-
-
 
 
 
